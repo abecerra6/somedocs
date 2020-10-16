@@ -78,13 +78,44 @@ access_log  /usr/local/var/log/nginx/access.log  main;
 error_log  /usr/local/var/log/nginx/error.log  debug;
 ```
 
-Copy the following files from google drive folder “Config Files/nginx/” to your local nginx folder: 
-    • ssl-local.key
-    • ssl-local.pem
-
+Copy the following files from google drive folder “Config Files/nginx/ssl-local.*” to your local nginx folder
+    
+Do:
+```
     chmod -R 777 /opt/rts
     chmod -R 777 /opt/nfs
     touch /opt/tomcat/tracking.deploy
-    
-    
+```  
+  
+Go to file /opt/tomcat/conf/server.xml. Replace the path:
+```
+    /Users/sunny/Workspace/6Connex/
+```
+with your local code path (e.g)
+```
+    /Users/yourUser/devel/ 
+```
 
+Go to file /opt/tomcat/conf/context.xml. Replace the username and password to your mysql user and password
+```
+ user="root"
+ password="1234"
+```
+
+## Setup Database
+
+* Configure a user with password to access the database
+* Create databases
+
+```
+CREATE DATABASE 6connex_dw2; 
+CREATE DATABASE 6connex_db;
+```
+
+* Create databases structure
+
+```
+mysql -u root -p123456 6connex_dw2 < DW_felipe.sql
+mysql -u root -p123456 6connex_db < db_felipe.sql
+```
+     
