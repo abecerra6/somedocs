@@ -119,3 +119,4 @@ mysql -u root -p123456 6connex_dw2 < DW_felipe.sql
 mysql -u root -p123456 6connex_db < db_felipe.sql
 ```
      
+You may have to run a list of sql files stored in /webapp/misc/scripts/db/alter_scripts/dw and /webapp/misc/scripts/db/alter_scripts/db
