@@ -49,8 +49,42 @@ follow https://brew.sh
 from https://github.com/6connexsource
 clone the repos {webapp, event, realtimeserver}
 
+## Compile the platform
 
+    export PATH for mvn
 
+Run the install.bat in following folders in order:
 
+1. webapp/messaging/install.bat
+2. event/install.bat
+3. webapp/install.bat
+    
+## Configure files
 
+Add to your /etc/hosts 
+
+```
+127.0.0.1 demo.6connexlocal.com
+127.0.0.1 tracking.6connexlocal.com
+127.0.0.1 rtsl.6connexlocal.com
+```
+
+Move file “Config Files/nginx/nginx.conf” to your local nginx folder /usr/local/etc/nginx/ngnix.conf
+
+Open ngix.conf make sure you have the following lines:
+
+```
+access_log  /usr/local/var/log/nginx/access.log  main;
+error_log  /usr/local/var/log/nginx/error.log  debug;
+```
+
+Copy the following files from google drive folder “Config Files/nginx/” to your local nginx folder: 
+    • ssl-local.key
+    • ssl-local.pem
+
+    chmod -R 777 /opt/rts
+    chmod -R 777 /opt/nfs
+    touch /opt/tomcat/tracking.deploy
+    
+    
 
