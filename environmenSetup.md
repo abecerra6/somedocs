@@ -33,6 +33,20 @@ https://drive.google.com/drive/folders/1wAQtaFHkOruJR1dGGFcTb6PAdkKWdLTr
       <password>dev2014@china</password>
     </server>
 ```
+    • Update the `cdn` table in 6connex_db
+            
+id
+vendor
+             url
+support_ssl
+1
+Local CDN
+https://demo.6connexlocal.com/upload/
+1
+2
+Local CDN (Secure)
+https://demo.6connexlocal.com/upload/
+1
 
 ## Install homebrew 
 
@@ -120,3 +134,18 @@ mysql -u root -p123456 6connex_db < db_felipe.sql
 ```
      
 You may have to run a list of sql files stored in /webapp/misc/scripts/db/alter_scripts/dw and /webapp/misc/scripts/db/alter_scripts/db
+
+* Update the `cdn table` in 6connex_db
+            
+| id | vendor | url | support_ssl |
+|----|--------|-----|-------------|
+| 1  | Local CDN | https://demo.6connexlocal.com/upload/ | 1 |
+| 2  |Local CDN (Secure) | https://demo.6connexlocal.com/upload/ | 1 |
+
+
+* Update the `real_time_server` table in 6connex_db
+
+| id | name | url | active |
+|----|--------|-----|-------------|
+| 1  | Real Time Server | localhost:8000 | 1 |
+
