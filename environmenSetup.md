@@ -11,7 +11,7 @@ https://drive.google.com/drive/folders/1wAQtaFHkOruJR1dGGFcTb6PAdkKWdLTr
 * .bash_profile
 * opt folder contents
 * nginx folder contents
-* from latest_6connexdb: DW_felipe.sql, db_felipe.sql
+* from latest_6connexdb: 6connex_db_Oct_22_20.sql, 6connex_dw2_Oct_22_20.sql
 
 ## Manually install packages
 
@@ -33,30 +33,18 @@ https://drive.google.com/drive/folders/1wAQtaFHkOruJR1dGGFcTb6PAdkKWdLTr
       <password>dev2014@china</password>
     </server>
 ```
-    • Update the `cdn` table in 6connex_db
-            
-id
-vendor
-             url
-support_ssl
-1
-Local CDN
-https://demo.6connexlocal.com/upload/
-1
-2
-Local CDN (Secure)
-https://demo.6connexlocal.com/upload/
-1
 
 ## Install homebrew 
 
 follow https://brew.sh
 
-## Install software with homebrew
+## Install software with homebrew and run services
 
     brew install nginx mysql@5.6 redis memcached rabbitmq node graphicsmagick python@3.8
     brew install ffmpeg --with-libvpx --with-libvorbis --with-libx265
     brew cask install google-chrome intellij-idea-ce mysqlworkbench slack
+    brew services start X (with X = {memcached,mysql@5.6,nginx,rabbitmq,redis}
+
 
 ## Download repos
 
@@ -107,7 +95,7 @@ Go to file /opt/tomcat/conf/server.xml. Replace the path:
 ```
 with your local code path (e.g)
 ```
-    /Users/yourUser/devel/ 
+    /Users/yourUser/Workspace/6Connex/ 
 ```
 
 Go to file /opt/tomcat/conf/context.xml. Replace the username and password to your mysql user and password
@@ -129,8 +117,8 @@ CREATE DATABASE 6connex_db;
 * Create databases structure
 
 ```
-mysql -u root -p123456 6connex_dw2 < 6connex_db_Oct_22_20.sql
-mysql -u root -p123456 6connex_db < 6connex_dw_Oct_22_20.sql
+mysql -u root -p1234 6connex_db < 6connex_db_Oct_22_20.sql
+mysql -u root -p1234 6connex_dw2 < 6connex_dw_Oct_22_20.sql
 ```
      
 You may have to run a list of sql files stored in /webapp/misc/scripts/db/alter_scripts/dw and /webapp/misc/scripts/db/alter_scripts/db
@@ -148,4 +136,6 @@ You may have to run a list of sql files stored in /webapp/misc/scripts/db/alter_
 | id | name | url | active |
 |----|--------|-----|-------------|
 | 1  | Real Time Server | localhost:8000 | 1 |
+
+## Setup MQ 
 
