@@ -129,8 +129,8 @@ CREATE DATABASE 6connex_db;
 * Create databases structure
 
 ```
-mysql -u root -p123456 6connex_dw2 < DW_felipe.sql
-mysql -u root -p123456 6connex_db < db_felipe.sql
+mysql -u root -p123456 6connex_dw2 < 6connex_db_Oct_22_20.sql
+mysql -u root -p123456 6connex_db < 6connex_dw_Oct_22_20.sql
 ```
      
 You may have to run a list of sql files stored in /webapp/misc/scripts/db/alter_scripts/dw and /webapp/misc/scripts/db/alter_scripts/db
