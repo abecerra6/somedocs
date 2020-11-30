@@ -139,3 +139,17 @@ You may have to run a list of sql files stored in /webapp/misc/scripts/db/alter_
 
 ## Setup MQ 
 
+Log in to:  http://127.0.0.1:15672/#/exchanges with
+Username: guest
+Password:  guest
+
+Add exchanges: {task_compression, copy.event}
+wit type:=topic and durability:=durable
+
+Add queues: {task_compression, copy.event}
+wit type:=classic and durability:=durable
+
+Bind queues to exchanges:
+For Queue in {task_compression, copy.event}:
+  Bind Queue to "From Exchange" with name Queue with Routing_Key:=Queue
+ 
