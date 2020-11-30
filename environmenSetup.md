@@ -144,10 +144,10 @@ Username: guest
 Password:  guest
 
 Add exchanges: {task_compression, copy.event}
-wit type:=topic and durability:=durable
+with type:=topic and durability:=durable
 
 Add queues: {task_compression, copy.event}
-wit type:=classic and durability:=durable
+with type:=classic and durability:=durable
 
 Bind queues to exchanges:
 For Queue in {task_compression, copy.event}:
