@@ -154,3 +154,23 @@ Bind queues to exchanges:
 For Queue in {task_compression, copy.event}:
   Bind Queue to Exchange (i.e From Exchange:= Queue,  Routing_Key:=Queue}
 ```
+
+## Start platform
+
+Put the file .bash_profile in your home folder if using bash or as .zprofile if using zshell
+
+```
+start-tomcat
+start-mailserver
+cd ~/Workspace/6connex/realtimeserver
+npm install
+./start.sh
+```
+Go to https://demo.6connexlocal.com/superadmin/login
+Login: james.ye@6connex.com
+Password: qwertyui1!
+
+Create an Client Account in Super Admin with “URL Subdomain” as demo. If latest database has this account already, you can skip this step.
+
+
+
