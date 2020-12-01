@@ -150,6 +150,7 @@ Add queues: {task_compression, copy.event}
 with type:=classic and durability:=durable
 
 Bind queues to exchanges:
+```
 For Queue in {task_compression, copy.event}:
   Bind Queue to Exchange (i.e From Exchange:= Queue,  Routing_Key:=Queue}
- 
+```
