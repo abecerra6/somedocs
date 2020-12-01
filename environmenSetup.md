@@ -42,7 +42,7 @@ follow https://brew.sh
 
     brew install nginx mysql@5.6 redis memcached rabbitmq node graphicsmagick python@3.8
     brew install ffmpeg --with-libvpx --with-libvorbis --with-libx265
-    brew cask install google-chrome intellij-idea-ce mysqlworkbench slack
+    brew cask install google-chrome intellij-idea-ce visual-studio-code mysqlworkbench slack 
     brew services start X (with X = {memcached,mysql@5.6,nginx,rabbitmq,redis}
 
 
