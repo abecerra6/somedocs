@@ -5,6 +5,13 @@
 We can use https://CLIENT.6connexlocal.com/controlpanel/EVENT/virtual-builder/room/{{roomId}}
 e.g https://test.6connexlocal.com/controlpanel/MR-helpyes-rooms2/virtual-builder/room/5
  
+We need to focus on settings and the template fields. 
+The template.nodes list has all the elements defined by the designers for the booth
+For each node:
+* (x,y) are the coordinates using the top-left corner of the booth background image as origin.
+* (width, height) define the size of the element
+* type is (banner,doorway link, logo etc.)
+ 
 ```json
 {
     "addOns": {
@@ -228,11 +235,6 @@ e.g https://test.6connexlocal.com/controlpanel/MR-helpyes-rooms2/virtual-builder
 }
 ```
 
-We need to focus on settings and the template fields. 
-The template.nodes list has all the elements defined by the designers for the booth
-For each node:
-* (x,y) are the coordinates using the top-left corner of the booth background image as origin.
-* type categorize the element (banner,doorway link, logo etc.)
 
 ## Creation endpoint
 VirtualBuilderController.newVirtualLocation  allows creating a virtual room or space.
