@@ -30,5 +30,67 @@ settings : {
 }
 ```
 
-If the Booth has been created by designers in the UI, we can ask to 
+And
+
+```json
+template : {
+  "templateType": "public",
+  "templateId": 4,
+  "bgImage": "/5/40/1611675366364_27_Booth_1.jpg",
+  "bgImageHeight": 1050,
+  "bgImageWidth": 1680,
+  "fgImage": null,
+  "fgImageHeight": 0,
+  "fgImageWidth": 0,
+  "flvHeight": 0,
+  "flvWidth": 0,
+  "walkingPeopleFlvPath": "",
+  "thumbnail": "",
+  "nodes": [
+    {
+      "selections": [],
+      "bgImage": "",
+      "y": 222,
+      "x": 351,
+      "label": null,
+      "name": null,
+      "id": -1,
+      "type": "banner",
+      "url": "",
+      "width": 226,
+      "height": 128
+    },
+    {
+      "selections": [],
+      "bgImage": "",
+      "y": 238,
+      "x": 753,
+      "label": null,
+      "name": null,
+      "id": -1,
+      "type": "banner",
+      "url": "",
+      "width": 169,
+      "height": 99
+    },
+    {
+      "selections": [],
+      "bgImage": "",
+      "y": 240,
+      "x": 948,
+      "label": null,
+      "name": null,
+      "id": -1,
+      "type": "banner",
+      "url": "",
+      "width": 170,
+      "height": 93
+    }
+  ]
+}
+```
+
+The template.nodes list has all the areas the Booth must have. (x,y) are the coordinates using the top-left corner of the background image as origin.
+
+
 
